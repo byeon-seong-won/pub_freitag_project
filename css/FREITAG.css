@@ -1043,7 +1043,7 @@ footer address {
 
 
 /* 해상도 1920만 지정 */
-@media (max-width : 1920px) {
+@media (max-width : 1440px) {
   #wrap, .top {display: none;}
   .mediaq {
     display: block;
