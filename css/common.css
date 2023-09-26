@@ -191,7 +191,27 @@ footer address {margin-top: 20px;font-size: 15px;}
 
 /* 작은 PC */
 @media (min-width : 1024px) and (max-width : 1440px) {
-  .top {right: 40px;bottom: 40px;}
   .gnb li a {font-size: 20px;}
+  .top {right: 40px;bottom: 40px;}
+}
 
+
+/* tablet */
+@media (min-width : 768px) and (max-width : 1023.99px) {
+  .gnb {flex-direction: column;}
+  .gnb li a {font-size: 20px;}
+  .top {right: 40px;bottom: 40px;}
+}
+
+
+/* mobile */
+@media (min-width : 320px) and (max-width : 767.99px) {
+  .gnb {flex-direction: column;}
+  .gnb li {height: 45px;}
+  .gnb li a {font-size: 18px;}
+  .font-icon {display: none;}
+  .logo img {width: 100px;}
+  .mainText {display: none;}
+  .top {display: none;}
+  footer {height: auto;padding: 20px;} 
 }
