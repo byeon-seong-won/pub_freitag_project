@@ -62,55 +62,136 @@
 
 
 
-*{  /* 전체선택자 (* : 모든 태그에 여백을 빼줌) */
-  margin: 0;
-  padding: 0;
-}
+* {margin: 0;padding: 0;}
+html, body {width: 100%;height: 100%;}
+html {overflow-y: scroll;overflow-x: hidden;    }
+body {font-family: 'Noto Sans KR', sans-serif;}
 
-html, body {
-  width: 100%;
-  height: 100%;
-}
-
-html {
-  overflow-y: scroll;     /* 문서전체에 세로 스크롤바 자국 항상 표시 */
-  overflow-x: hidden;     /* 문서전체에 가로 스크롤바 자국 항상 숨김 */
-}
-
-body {
-  font-family: 'Noto Sans KR', sans-serif;
-}
-
-/* 시멘틱태그를 지원하지 않는 브라우저에서 inline으로 인식하기 때문에 block으로 변경 */
 article,aside,details,summary,figcaption,figure,
-footer,header,hgroup,main,nav,section {
+footer,header,hgroup,main,nav,section {display: block;}
+
+li {list-style-type: none;}   
+a {text-decoration: none;color: inherit;} 
+table {border-collapse: collapse;   }
+input, select {vertical-align: middle;}
+html{scroll-behavior: smooth;}
+body {font-family: 'Montserrat', sans-serif;color: #333;}
+
+
+
+
+/* top 버튼 */
+.top {position: fixed;right: 80px;bottom: 80px;z-index: 10;}
+.top a {
   display: block;
+  width: 80px;
+  height: 80px;
+  background: url(../image/top.png) no-repeat center center;
+  background-size: 80px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgb(214, 214, 214);
+  transition: 1.3s;
+}
+.top a:hover {background: url(../image/top_on.png) no-repeat center center;background-color: #000;background-size: 80px;transform: rotate(360deg);}
+.mainImg {position: relative;width: 100%;height: 750px;}
+.mainImg:before {
+  content: '';
+  width: 100%;
+  height: 750px;
+  background: url(../image/main_01.png) no-repeat center center fixed;
+  background-size: cover;
+  transform: translateY(-60px);
+  position: absolute;
+  top: 0;
 }
 
-li {list-style-type: none;}   /* 목록에 점 없애기 */
 
-a {
-  text-decoration: none;      /* 하이퍼링크 밑줄 없애기 */
-  color: inherit;             /* 하이퍼링크의 글자색 부모한테 상속받기 */
-                              /* a태그까지 오지 않고 부모에서도 적용 가능 -> ul li {} */
-} 
 
-table {
-  border-collapse: collapse;   /* 표의 더블선 제거 */
+
+
+/* ______________HEADER______________ */
+header {position: absolute;top: 0;width: 100%;height: 60px;}
+nav {top: 0;height: inherit;display: flex;justify-content: space-between;align-items: center;position: relative;}
+.logo img{position: absolute;top: 0;width: 130px;height: 45px;}
+.font-icon {
+  top: 0;
+  left: 130px;
+  position: absolute;
+  background-color: #000;
+  height: 45px;
+  text-align: left;
+  width: 85px;
+  color: #fff;
+  font-size: 20px;
+  padding-left: 0;
 }
-
-input, select {
-  vertical-align: middle;
-  /* 문자와 나란히 입력박스를 배치하면 높낮이가 맞지 않아 맞추기 위함 */     
+.font-icon i {transform: translateY(10px);margin-left: 15px;}
+.font-icon i:hover {cursor: pointer;}
+.font-icon i .fa1 {margin-left: 0;}
+.gnb {
+  position: absolute;  
+  height: inherit;
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  right: 0;
 }
-
-.clear:after {                /* float문제 해결 */
-  content: "";
-  display: block;
-  clear: both;
+.gnb li {height: 60px;}
+.gnb li a {
+  display: inline-block;
+  color: #fff;
+  font-weight: 300;
+  font-size: 30px;
+  margin: 15px;
+  letter-spacing: -1px;
+  transition: 0.5s;
 }
+.gnb li a:hover {border-bottom: 1px solid #fff;}
+.mainText {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  width: 270px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-150%);
+  letter-spacing: -1px;
+}
+.mainText:hover {background-color: #333;cursor: pointer;}
 
-.indent {                     /* 글자 안보이게 밀어 놓기 */
-  display: block;
-  text-indent: -9999px;
+
+
+
+
+
+/* ______________FOOTER______________ */
+footer {
+  background-color: #333;
+  margin-top: 0;
+  text-align: center;
+  padding-top: 10px;
+  color: #fff;
+  height: 200px;
+}
+footer h4 {margin-top: 20px;font-size: 20px;}
+footer p {margin-top: 10px;line-height: 25px;}
+footer address {margin-top: 20px;font-size: 15px;}
+
+
+
+
+
+
+/* 작은 PC */
+@media (min-width : 1024px) and (max-width : 1440px) {
+  .top {right: 40px;bottom: 40px;}
+  .gnb li a {font-size: 20px;}
+
 }
