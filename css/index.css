@@ -512,41 +512,26 @@
 @media (min-width : 1024px) and (max-width : 1440px) {
   
 
+
   /* 공통 */
-  .service h2, .store h2, .contact h2 {font-size: 45px;}
-  
+  .service>h2, .store>h2, .contact>h2 {font-size: 45px;}
 
-  .container, .about_inner, .text, .serviceImg, .text_img, .fab_inner, .serviceImg ul li img {width: 100%;}
-  .serviceImg ul li img {width: auto;}
-  .item_01, .item_02, .item_03, .serviceImg ul li  {flex: 1;}
-  .storeInfo, .storeInfo_sec {column-gap: 10px;}
-  .serviceImg ul {display: flex;column-gap: 10px;width: 100%;justify-content: unset;}
+  .bag>h3, .store>h3, .contact>h3,
+  .store>div.storeImg .detail_01 .titile_01 h4, .store>div.storeImg .detail_02 .titile_02 h4, .store>div.storeImg .detail_03 .titile_03 h4, 
+  .contact>div.contactImg>ul.gallery>li>div.content>p {font-size: 18px;}
 
+  .bag>div.tab-inner>div.flex-Inner>div.container>div.btn_top label, 
+  .bag>div.tab-inner>div.flex-Inner>div.container>input[id=tab1]:checked ~.btn_top label[for=tab1], 
+  .bag>div.tab-inner>div.flex-Inner>div.container>input[id=tab2]:checked ~.btn_top label[for=tab2], 
+  .bag>div.tab-inner>div.flex-Inner>div.container>input[id=tab3]:checked ~.btn_top label[for=tab3], 
+  .bag>div.tab-inner>div.flex-Inner>div.container>input[id=tab4]:checked ~.btn_top label[for=tab4], 
+  .bag>div.tab-inner>div.flex-Inner>div.container>input[id=tab5]:checked ~.btn_top label[for=tab5],
+  .about>div.about_inner>h4, .store>p {font-size: 16px;}
 
-
-  .fab_text {margin-right: 0;border: none;padding:0 40px;}
-  .detail_01, .detail_02, .detail_03 {bottom: -196px;padding: 25px;}
-
-
-  .btn_top label, input[id=tab1]:checked ~.btn_top label[for=tab1], 
-  input[id=tab2]:checked ~.btn_top label[for=tab2], 
-  input[id=tab3]:checked ~.btn_top label[for=tab3], 
-  input[id=tab4]:checked ~.btn_top label[for=tab4], 
-  input[id=tab5]:checked ~.btn_top label[for=tab5],
-  .about_inner h4, .store>p {font-size: 16px;}
-
-  .about_inner h2, .text_inner h2 {font-size: 30px;}
-  .bag h2 {font-size: 40px;}
-
-  .bag h3, #store h3, .contact h3,
-  .detail_01 .titile_01 h4, .detail_02 .titile_02 h4, .detail_03 .titile_03 h4, 
-  .contact>div.contactImg>ul.gallery>li>div.content p {font-size: 18px;}
-
-  .bag p {font-size: 15px;}
-
-  .bottomBtn, .btn2 {width: 200px;font-size: 16px;}
-  .about_inner h3 {font-size: 16px;padding: 0 40px;}
-  .text_inner p {font-size: 14px;}
+  .bag>div.tab-inner>div.flex-Inner>div.container, .about>div.about_inner, 
+  .about>div.aboutTextImg>div.text, .service>div.serviceImg, 
+  .service>div.text_img, .service>div.service_fab>div.fab_inner, 
+  .service>div.serviceImg>ul>li>img {width: 100%;}
 
   .opening_01 span:nth-of-type(2),
   .opening_02 span:nth-of-type(2),
@@ -554,15 +539,44 @@
   .contact_01 span:nth-of-type(2),
   .contact_02 span:nth-of-type(2), 
   .contact_03 span:nth-of-type(2),
-  .text_img .img, .fab_inner iframe,
-  .about_tab-inner {display: none;}
+  .service>div.text_img>div.img, .service>div.service_fab>div.fab_inner>iframe,
+  .about>div.aboutTextImg>div.about_tab-inner {display: none;}
 
-  .contact_01, .contact_02, .contact_03 {flex: 3;}
-  .contact_01 ul li, .contact_02 ul li, .contact_03 ul li {word-break: break-all;font-size: 14px;}
-  .content {width: auto;padding: 40px;}
-  .content h4 {font-size: 20px;margin-top: 8px;}
+  .bag>div.tab-inner>a.bottomBtn, .service>div.service_fab>a.btn {width: 200px;font-size: 16px;}
+
+
+
+
+  /* 01 bag */
+  .bag>p {font-size: 15px;}
+  .bag>h2 {font-size: 40px;}
+
+  /* 02 about */
+  .about>div.about_inner>h2, .about>div.aboutTextImg>div.text>div.text_inner>h2 {font-size: 30px;}
+  .about>div.about_inner>h3 {font-size: 16px;padding: 0 40px;}
+  .about>div.aboutTextImg>div.text>div.text_inner>p {font-size: 14px;}
+
+  /* 03 service */
+  .service>div.serviceImg>ul {display: flex;column-gap: 10px;width: 100%;justify-content: unset;}
+  .service>div.serviceImg>ul>li {flex: 1;}
+  .service>div.serviceImg>ul>li>img {width: auto;}
+  .service>div.service_fab>div.fab_inner>div.fab_text {margin-right: 0;border: none;padding:0 40px;}
+
+  /* 04 store */
+  .store>div.storeImg .item_01, .store>div.storeImg .item_02, .store>div.storeImg .item_03 {flex: 1;}
+  .store>div.storeImg .detail_01, .store>div.storeImg .detail_02, .store>div.storeImg .detail_03 {bottom: -196px;padding: 25px;}
+  .store>div.storeImg .contact_01, .store>div.storeImg .contact_02, .store>div.storeImg .contact_03 {flex: 3;}
+  .store>div.storeImg .contact_01>ul>li, .store>div.storeImg .contact_02>ul>li, .store>div.storeImg .contact_03>ul>li {word-break: break-all;font-size: 14px;}
+  .store>div.storeImg>ul.storeInfo, .store>div.storeImg>ul {column-gap: 10px;}
+
+
+  /* 05 contact */
+  .contact>div.contactImg>ul.gallery>li>div.content {width: auto;padding: 40px;}
+  .contact>div.contactImg>ul.gallery>li>div.content>h4 {font-size: 20px;margin-top: 8px;}
 
 }
+
+
 
 
 
